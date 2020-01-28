@@ -10,10 +10,17 @@ const toolbar = (props) => (
     <header className={classes.Toolbar}>
         <div className={classes.Ribon}/>
         <div>
-            <h1>Logo</h1>
+            <div>
+                <h1>Logo</h1>
+            </div>
+            <div>
+                <Button><h1>Cart</h1></Button>
+            </div>
         </div>
         <div>
-            <Button><h1>Cart</h1></Button>
+            <nav>
+                
+            </nav>
         </div>
     </header>
 );
