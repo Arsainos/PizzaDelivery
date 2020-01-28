@@ -1,5 +1,5 @@
 .Toolbar {
-    height: 68px;
+    height: 128px;
     width: 100%;
     position: fixed;
     top:0;
@@ -20,4 +20,28 @@
     top:0;
     left: 0;
     background-color: #338a3e;
+}
+
+.TopPanel {
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top:12px;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.NavPanel {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top:68px;
+    left: 0;
+    background-color: #98ee99;
+    align-items: center;
+    padding: 0 20px;
 }
