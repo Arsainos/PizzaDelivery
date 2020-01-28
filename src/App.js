@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 // import styles
 import classes from './App.module.css';
@@ -15,12 +16,16 @@ const asyncMainPage = asyncComponent(() => {
 });
 
 function App() {
+  let routes = (
+    <Switch>
+      <Route path="/" exact component={asyncMainPage} />
+    </Switch>
+  );
+
   return (
     <div className={classes.App}>
       <Layout>
-        <div>
-          <h1>Hello World!</h1>
-        </div>
+        {routes}
       </Layout>
     </div>
   );
