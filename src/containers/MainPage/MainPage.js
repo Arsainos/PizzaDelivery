@@ -20,6 +20,24 @@ const mainPage = (props) => {
         {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`}
         ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
         ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+    ];
+
+    const bundles = [
+        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+    ];
+
+    const altfood = [
+        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
     ];
 
 
@@ -37,12 +55,16 @@ const mainPage = (props) => {
                 title='Pizza'
                 cards={pizzas}
             />
-            <div>
-                <h1>bundles</h1>
-            </div>
-            <div>
-                <h1>alt food</h1>
-            </div>
+            <FoodGrid 
+                id='bundles'
+                title='Bundles'
+                cards={bundles}
+            />
+            <FoodGrid 
+                id='altfood'
+                title='AltFood'
+                cards={altfood}
+            />
         </AUX>
     );
 };
