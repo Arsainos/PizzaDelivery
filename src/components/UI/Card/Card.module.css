@@ -1,0 +1,55 @@
+body {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+  }
+  
+  .Product {
+    width: 200px;
+  
+    margin-right: 30px;
+  }
+  
+  .ProductInner {
+    margin-bottom: 25px;
+  }
+  
+  .ProductImage, .ProductImageImg {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ProductName {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  
+  .ProductDescription {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #878686;
+  }
+  
+  .ProductCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ProductToCart {
+    width: 110px;
+    height: 40px;
+  }
+  
+  .ProductPrice {
+    font-weight: 700;
+  }
+  
+  .ProductButton {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #ff6900;
+    border-radius: 10px;
+    color: #ff6900;
+    background-color: transparent;
+  }
+  

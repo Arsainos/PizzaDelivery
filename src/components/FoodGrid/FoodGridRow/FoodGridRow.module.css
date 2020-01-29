@@ -1,6 +1,4 @@
 .GridRowOuterWrapper {
-    display: table;
-    table-layout: fixed;
     width: 100%;
     border-collapse: separate;
     padding-top: 60px;
@@ -8,6 +6,8 @@
 
 .GridRow {
     position: relative;
-    display: table-row;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: 100%;
 }

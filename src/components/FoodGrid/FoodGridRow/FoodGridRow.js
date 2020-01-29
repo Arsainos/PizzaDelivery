@@ -4,13 +4,13 @@ import React from 'react';
 import classes from './FoodGridRow.module.css';
 
 const foodGridRow = (props) => {
-    return (
-        <div className={classes.GridRowOuterWrapper}>
-            <div className={classes.GridRow}>
-                {props.children}
+        return (
+            <div className={classes.GridRowOuterWrapper}>
+                <div className={classes.GridRow}>
+                    {props.children}
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
 
 export default foodGridRow;

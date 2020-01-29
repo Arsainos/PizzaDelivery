@@ -8,6 +8,7 @@ import AUX from '../../hocs/Axuliary.js';
 
 // import components
 import Carousel from '../../components/UI/Carousel/Carousel.js';
+import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
@@ -15,6 +16,12 @@ import carousel2 from '../../assets/Carousel/carousel2.jpg';
 import carousel3 from '../../assets/Carousel/carousel3.jpg';
 
 const mainPage = (props) => {
+    const pizzas = [
+        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`}
+    ];
+
 
     return(
         <AUX>
@@ -25,9 +32,11 @@ const mainPage = (props) => {
                     <div><img src={carousel3} alt="carousel yamu pizza"></img></div>
                 </Carousel>
             </div>
-            <div>
-                <h1>pizza list</h1>
-            </div>
+            <FoodGrid 
+                id='pizzas'
+                title='Pizza'
+                cards={pizzas}
+            />
             <div>
                 <h1>bundles</h1>
             </div>
