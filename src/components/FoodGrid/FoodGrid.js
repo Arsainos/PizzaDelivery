@@ -11,10 +11,10 @@ const foodGrid = (props) => {
     const {id, title, cards, elementsInRow} = props;
 
     let cardsRow = [];
-    const numberOfRows = Math.ceil(cards.length / );
+    const numberOfRows = Math.ceil(cards.length / elementsInRow);
 
     for(let i=0; i<numberOfRows;i++){
-        const filtered = cards.filter((_, index) => index >= 4*i && index < 4*(i+1));
+        const filtered = cards.filter((_, index) => index >= elementsInRow*i && index < elementsInRow*(i+1));
         const mapped = filtered.map((it) => (
             <Card 
                 key={Math.random()*(i+1)}
