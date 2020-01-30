@@ -8,10 +8,10 @@ import FoodGridRow from './FoodGridRow/FoodGridRow.js';
 import Card from '../UI/Card/Card.js';
 
 const foodGrid = (props) => {
-    const {id, title, cards} = props;
+    const {id, title, cards, elementsInRow} = props;
 
     let cardsRow = [];
-    const numberOfRows = Math.ceil(cards.length / 4);
+    const numberOfRows = Math.ceil(cards.length / );
 
     for(let i=0; i<numberOfRows;i++){
         const filtered = cards.filter((_, index) => index >= 4*i && index < 4*(i+1));

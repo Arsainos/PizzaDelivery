@@ -54,16 +54,19 @@ const mainPage = (props) => {
                 id='pizzas'
                 title='Pizza'
                 cards={pizzas}
+                elementsInRow={4}
             />
             <FoodGrid 
                 id='bundles'
                 title='Bundles'
                 cards={bundles}
+                elementsInRow={4}
             />
             <FoodGrid 
                 id='altfood'
                 title='AltFood'
                 cards={altfood}
+                elementsInRow={4}
             />
         </AUX>
     );
