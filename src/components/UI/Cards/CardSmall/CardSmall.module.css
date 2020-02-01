@@ -1,6 +1,6 @@
 .CardSmall {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     padding: 15px;

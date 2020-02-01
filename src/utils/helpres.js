@@ -18,6 +18,7 @@ export const generateCardsData = (inputs, cardType, handler) => {
                     description={it.description}
                     price={it.price}
                     clicked={handler}
+                    list={it.list}
                 />
             });
 

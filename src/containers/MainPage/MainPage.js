@@ -44,11 +44,11 @@ const MainPage = (props) => {
     };
 
     const pizzas = [
-        {imageSrc:'', imageAlt:`pizza`, name:`Margaritta`, description:`Proident pariatur commodo culpa reprehenderit.`, price:`10`}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Veniam enim aliquip velit dolore fugiat.`, price:`15`, }
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`Aute excepteur tempor eu culpa consequat culpa mollit pariatur ut nostrud id duis magna.`, price:`12`, }
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Laboris consectetur anim dolor voluptate mollit esse.`, price:`15`, }
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Four seasons`, description:`Ex sint anim nisi minim cupidatat duis.`, price:`12`, }
+        {imageSrc:'', imageAlt:`pizza`, name:`Margaritta`, description:`Proident pariatur commodo culpa reprehenderit.`, price:10}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Veniam enim aliquip velit dolore fugiat.`, price:15, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`Aute excepteur tempor eu culpa consequat culpa mollit pariatur ut nostrud id duis magna.`, price:12, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Laboris consectetur anim dolor voluptate mollit esse.`, price:13, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Four seasons`, description:`Ex sint anim nisi minim cupidatat duis.`, price:11, }
     ];
 
     const bundles = [
