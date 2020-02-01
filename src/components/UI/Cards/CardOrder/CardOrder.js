@@ -5,7 +5,6 @@ import classes from './CardOrder.module.css';
 
 // import image
 import pizzaImage from '../../../../assets/mocks/pizzaMock.jpg';
-import card from '../Card/Card';
 
 const CardOrder = (props) => {
     const [cardOrderState, cardOrderUpdate] = useState({summary:`Traditional Dough, Small Size`, size:{name:`small`, price:0} , dough:{name:`traditional`, price:0} , price:props.price, additions:[]});
