@@ -92,7 +92,7 @@ const MainPage = (props) => {
             <FoodGrid 
                 id='altfood'
                 title='AltFood'
-                data={generateCardsData(altfood, Card, purchaseHandler)}
+                data={generateCardsData(altfood, Card, purchaseContinueHandler)}
                 elementsInRow={4}
             />
         </AUX>
