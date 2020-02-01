@@ -18,9 +18,10 @@ import carousel2 from '../../assets/Carousel/carousel2.jpg';
 import carousel3 from '../../assets/Carousel/carousel3.jpg';
 
 const MainPage = (props) => {
-    const [mainPageState, updateMainPageState] = useState({purchasing: true});
+    const [mainPageState, updateMainPageState] = useState({purchasing: false});
     
-    const purchaseHandler = () => {
+    const purchaseHandler = (currentCard) => {
+        console.log(currentCard);
         updateMainPageState({purchasing: true});
     };
 
