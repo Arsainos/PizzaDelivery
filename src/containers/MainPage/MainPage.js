@@ -1,9 +1,5 @@
 import React, {useState} from 'react';
 
-
-// import styles
-import classes from './MainPage.module.css';
-
 // import hocs 
 import AUX from '../../hocs/Axuliary.js';
 
@@ -11,7 +7,7 @@ import AUX from '../../hocs/Axuliary.js';
 import Carousel from '../../components/UI/Carousel/Carousel.js';
 import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
-import Card from '../../components/UI/Cards/Card/Card.js.js';
+import Card from '../../components/UI/Cards/Card/Card.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
