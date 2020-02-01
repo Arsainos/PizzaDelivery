@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+
 
 // import styles
 import classes from './MainPage.module.css';
@@ -9,13 +10,26 @@ import AUX from '../../hocs/Axuliary.js';
 // import components
 import Carousel from '../../components/UI/Carousel/Carousel.js';
 import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
+import Modal from '../../components/UI/Modal/Modal.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
 import carousel2 from '../../assets/Carousel/carousel2.jpg';
 import carousel3 from '../../assets/Carousel/carousel3.jpg';
 
-const mainPage = (props) => {
+const MainPage = (props) => {
+    const [mainPageState, updateMainPageState] = useState({purchasing: true});
+    
+    const purchaseHandler = () => {
+        console.log(`updating`);
+        updateMainPageState({purchasing: true});
+    };
+
+    const purchaseCancelHandler = () => {
+        updateMainPageState({purchasing: false});
+    };
+
+
     const pizzas = [
         {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`}
         ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`}
@@ -43,6 +57,9 @@ const mainPage = (props) => {
 
     return(
         <AUX>
+            <Modal show={mainPageState.purchasing} modalClosed={purchaseCancelHandler}>
+                <div><h1>Order State</h1></div>
+            </Modal>
             <div>
                 <Carousel>
                     <div><img src={carousel1} alt="carousel yamu pizza"></img></div>
@@ -72,5 +89,5 @@ const mainPage = (props) => {
     );
 };
 
-export default mainPage;
+export default MainPage;
 

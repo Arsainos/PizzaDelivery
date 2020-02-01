@@ -22,7 +22,8 @@ const foodGrid = (props) => {
                 alt={it.imageAlt}
                 name={it.name}
                 description={it.description}
-                price={it.price}              
+                price={it.price}     
+                clicked={it.clicked}
             />
         ));
 
