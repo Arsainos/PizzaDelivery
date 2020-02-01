@@ -8,6 +8,7 @@ import Carousel from '../../components/UI/Carousel/Carousel.js';
 import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
 import Card from '../../components/UI/Cards/Card/Card.js';
+import CardOrder from '../../components/UI/Cards/CardOrder/CardOrder.js';
 
 // import helpers and utilities
 import {generateCardsData} from '../../utils/helpres.js';
@@ -22,10 +23,16 @@ const MainPage = (props) => {
     
     const purchaseHandler = (currentCard) => {
         console.log(currentCard);
-        updateMainPageState({purchasing: true});
+        
+        updateMainPageState({purchasing: true, purchasingItem: generateCardsData([currentCard], CardOrder, purchaseContinueHandler)});
     };
 
     const purchaseCancelHandler = () => {
+        updateMainPageState({purchasing: false, purchasingItem: null});
+    };
+
+    const purchaseContinueHandler = () => {
+        console.log(`pizza add to order`);
         updateMainPageState({purchasing: false, purchasingItem: null});
     };
 
@@ -56,7 +63,7 @@ const MainPage = (props) => {
     return(
         <AUX>
             <Modal show={mainPageState.purchasing} modalClosed={purchaseCancelHandler}>
-                <div><h1>Order State</h1></div>
+                {mainPageState.purchasingItem}
             </Modal>
             <div>
                 <Carousel>

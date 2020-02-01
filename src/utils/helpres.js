@@ -3,6 +3,7 @@ import React from 'react';
 // import components
 import Card from '../components/UI/Cards/Card/Card.js';
 import PromoCard from '../components/UI/Cards/PromoCard/PromoCard.js';
+import CardOrder from '../components/UI/Cards/CardOrder/CardOrder.js';
 
 export const generateCardsData = (inputs, cardType, handler) => {
     switch(cardType) {
@@ -10,7 +11,7 @@ export const generateCardsData = (inputs, cardType, handler) => {
             return inputs.map((it, i) => {
                 return <Card
                     key={Math.random()*(i+1)}
-                    mageSrc={it.imageSrc}
+                    imageSrc={it.imageSrc}
                     alt={it.imageAlt}
                     name={it.name}
                     description={it.description}
@@ -26,6 +27,19 @@ export const generateCardsData = (inputs, cardType, handler) => {
                     title={it.title}
                     description={it.description}
                     imageSrc={''}
+                />
+            });
+
+        case CardOrder:
+            return inputs.map((it, i) => {
+                return <CardOrder
+                key={Math.random()+'_'+(i+1)}
+                iamgeSrc={it.imageSrc}
+                alt={it.iamgeAlt}
+                name={it.name}
+                description={it.description}
+                price={it.price}
+                continueClick={handler}
                 />
             });
 

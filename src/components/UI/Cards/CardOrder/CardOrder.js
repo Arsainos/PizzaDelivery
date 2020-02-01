@@ -22,16 +22,16 @@ const CardOrder = (props) => {
                     <h3 className={classes.OptionsHeading} >Size</h3>
                     <ul className={classes.OptionsList} >
                         <li className={classes.Checkbox} >
-                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-s" name="size"  value="1" checked="true"/>
-                            <label className={classes.CheckboxLabel} for="size-s" >Small</label>
+                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-s" name="size"  value="1" checked={true}/>
+                            <label className={classes.CheckboxLabel} htmlFor="size-s" >Small</label>
                         </li>
                         <li className={classes.Checkbox} >
-                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-m" name="size"  value="1" checked="" />
-                            <label className={classes.CheckboxLabel} for="size-m" >Medium</label>
+                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-m" name="size"  value="1" />
+                            <label className={classes.CheckboxLabel} htmlFor="size-m" >Medium</label>
                         </li>
                         <li className={classes.Checkbox} >
-                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-l" name="size"  value="1" checked="" />
-                            <label className={classes.CheckboxLabel} for="size-l" >Large</label>
+                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="size-l" name="size"  value="1" />
+                            <label className={classes.CheckboxLabel} htmlFor="size-l" >Large</label>
                         </li>
                     </ul>
                 </div>
@@ -39,12 +39,12 @@ const CardOrder = (props) => {
                     <h3 className={classes.OptionsHeading} >Dough</h3>
                     <ul className={classes.OptionsList} >
                         <li className={classes.Checkbox} >
-                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="dough-traditional" name="dough"  value="1" checked="true" />
-                            <label className={classes.CheckboxLabel} for="dough-traditional" >Traditional</label>
+                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="dough-traditional" name="dough"  value="1" checked={true} />
+                            <label className={classes.CheckboxLabel} htmlFor="dough-traditional" >Traditional</label>
                         </li>
                         <li className={classes.Checkbox} >
-                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="dough-thin" name="dough"  value="1" checked="" />
-                            <label className={classes.CheckboxLabel} for="dough-thin" >Thin</label>
+                            <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="radio" id="dough-thin" name="dough"  value="1" />
+                            <label className={classes.CheckboxLabel} htmlFor="dough-thin" >Thin</label>
                         </li>
                     </ul>
                 </div>
@@ -53,19 +53,19 @@ const CardOrder = (props) => {
                     <ul className={classes.OptionsList} >
                         <li className={classes.Checkbox} >
                             <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="checkbox" id="toppings-mushrooms" name="toppings"  value="1" />
-                            <label className={classes.CheckboxLabel} for="toppings-mushrooms" >Mushrooms</label>
+                            <label className={classes.CheckboxLabel} htmlFor="toppings-mushrooms" >Mushrooms</label>
                         </li>
                         <li className={classes.Checkbox} >
                             <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="checkbox" id="toppings-mozzarella" name="toppings"  value="1" />
-                            <label className={classes.CheckboxLabel} for="toppings-mozzarella" >Mozzarella</label>
+                            <label className={classes.CheckboxLabel} htmlFor="toppings-mozzarella" >Mozzarella</label>
                         </li>
                         <li className={classes.Checkbox} >
                             <input className={[classes.InputCheckbox, classes.VisuallyHidden].join(' ')} type="checkbox" id="toppings-jalapeno" name="toppings"  value="1" />
-                            <label className={classes.CheckboxLabel} for="toppings-jalapeno" >Jalapeno</label>
+                            <label className={classes.CheckboxLabel} htmlFor="toppings-jalapeno" >Jalapeno</label>
                         </li>
                     </ul>
                 </div>
-                <button className={classes.AddButton}  onClick={props.continueClick}>Add to Cart</button>
+                <button className={classes.AddButton}  onClick={props.continueClick}>{`Add to Cart for `+props.price}</button>
             </div>
         </div>
     )

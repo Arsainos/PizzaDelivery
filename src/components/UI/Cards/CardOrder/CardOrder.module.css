@@ -1,6 +1,6 @@
-.VissualyHidden:not(:focus):not(:active),
-input[type="checkbox"].VissualyHidden,
-input[type="radio"].VissualyHidden {
+.VisuallyHidden:not(:focus):not(:active),
+input[type="checkbox"].VisuallyHidden,
+input[type="radio"].VisuallyHidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -84,7 +84,7 @@ input[type="radio"].VissualyHidden {
     cursor: pointer;
 }
 
-.Checkbox::before {
+.CheckboxLabel::before {
     content: "";
     position: absolute;
     left: 0;
@@ -97,7 +97,7 @@ input[type="radio"].VissualyHidden {
     border-radius: 50%;
 }
 
-.InputCheckbox:checked ~ .checkbox__label::after {
+.InputCheckbox:checked ~ .CheckboxLabel::after {
     content: "";
     position: absolute;
     top: 50%;
