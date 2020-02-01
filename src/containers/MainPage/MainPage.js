@@ -9,6 +9,9 @@ import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
 import Card from '../../components/UI/Cards/Card/Card.js';
 
+// import helpers and utilities
+import {generateCardsData} from '../../utils/helpres.js';
+
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
 import carousel2 from '../../assets/Carousel/carousel2.jpg';
@@ -25,27 +28,6 @@ const MainPage = (props) => {
     const purchaseCancelHandler = () => {
         updateMainPageState({purchasing: false, purchasingItem: null});
     };
-
-    const generateCardsData = (inputs, cardType, handler) => {
-        switch(cardType) {
-            case Card:
-                return inputs.map((it, i) => {
-                    return <Card
-                        key={Math.random()*(i+1)}
-                        mageSrc={it.imageSrc}
-                        alt={it.imageAlt}
-                        name={it.name}
-                        description={it.description}
-                        price={it.price}
-                        clicked={handler}
-                    />
-                });
-
-            default:
-                return [];
-        }
-    };
-
 
     const pizzas = [
         {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, clicked: purchaseHandler}
@@ -71,10 +53,6 @@ const MainPage = (props) => {
         ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
     ];
 
-    const pizzasCards = generateCardsData(pizzas, Card, purchaseHandler);
-    const bundlesCards = generateCardsData(bundles, Card, purchaseHandler);
-    const altFoodCards = generateCardsData(altfood, Card, purchaseHandler);
-
     return(
         <AUX>
             <Modal show={mainPageState.purchasing} modalClosed={purchaseCancelHandler}>
@@ -90,19 +68,19 @@ const MainPage = (props) => {
             <FoodGrid 
                 id='pizzas'
                 title='Pizza'
-                data={pizzasCards}
+                data={generateCardsData(pizzas, Card, purchaseHandler)}
                 elementsInRow={4}
             />
             <FoodGrid 
                 id='bundles'
                 title='Bundles'
-                data={bundlesCards}
+                data={generateCardsData(bundles, Card, purchaseHandler)}
                 elementsInRow={4}
             />
             <FoodGrid 
                 id='altfood'
                 title='AltFood'
-                data={altFoodCards}
+                data={generateCardsData(altfood, Card, purchaseHandler)}
                 elementsInRow={4}
             />
         </AUX>
