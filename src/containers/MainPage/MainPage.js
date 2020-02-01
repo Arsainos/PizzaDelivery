@@ -11,7 +11,7 @@ import AUX from '../../hocs/Axuliary.js';
 import Carousel from '../../components/UI/Carousel/Carousel.js';
 import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
-import Card from '../../components/UI/Card/Card.js';
+import Card from '../../components/UI/Cards/Card/Card.js.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';

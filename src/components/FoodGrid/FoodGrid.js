@@ -5,7 +5,7 @@ import classes from './FoodGrid.module.css';
 
 // import components
 import FoodGridRow from './FoodGridRow/FoodGridRow.js';
-import Card from '../UI/Card/Card.js';
+import Card from '../UI/Cards/Card/Card.js.js';
 
 const foodGrid = (props) => {
     const {id, title, data, elementsInRow} = props;
