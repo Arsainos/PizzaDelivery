@@ -24,7 +24,7 @@ const Promotions = (props) => {
         <GridFood 
             id={'promotions'}
             title={'Promotions'}
-            cards={promoCards}
+            data={promoCards}
             elementsInRow={3}
         />
     );

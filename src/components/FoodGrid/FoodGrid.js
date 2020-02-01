@@ -8,26 +8,15 @@ import FoodGridRow from './FoodGridRow/FoodGridRow.js';
 import Card from '../UI/Card/Card.js';
 
 const foodGrid = (props) => {
-    const {id, title, cards, elementsInRow} = props;
+    const {id, title, data, elementsInRow} = props;
 
     let cardsRow = [];
-    const numberOfRows = Math.ceil(cards.length / elementsInRow);
+    const numberOfRows = Math.ceil(data.length / elementsInRow);
 
     for(let i=0; i<numberOfRows;i++){
-        const filtered = cards.filter((_, index) => index >= elementsInRow*i && index < elementsInRow*(i+1));
-        const mapped = filtered.map((it) => (
-            <Card 
-                key={Math.random()*(i+1)}
-                imageSrc={it.imageSrc}
-                alt={it.imageAlt}
-                name={it.name}
-                description={it.description}
-                price={it.price}     
-                clicked={it.clicked}
-            />
-        ));
+        const filtered = data.filter((_, index) => index >= elementsInRow*i && index < elementsInRow*(i+1));
 
-        cardsRow.push(<FoodGridRow key={id+'_foodGridRow_'+i}> {mapped}</FoodGridRow>)
+        cardsRow.push(<FoodGridRow key={id+'_foodGridRow_'+i}> {filtered}</FoodGridRow>)
     }
     
     return (

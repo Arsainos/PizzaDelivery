@@ -11,6 +11,7 @@ import AUX from '../../hocs/Axuliary.js';
 import Carousel from '../../components/UI/Carousel/Carousel.js';
 import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
+import Card from '../../components/UI/Card/Card.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
@@ -27,6 +28,26 @@ const MainPage = (props) => {
 
     const purchaseCancelHandler = () => {
         updateMainPageState({purchasing: false, purchasingItem: null});
+    };
+
+    const generateCardsData = (inputs, cardType, handler) => {
+        switch(cardType) {
+            case Card:
+                return inputs.map((it, i) => {
+                    return <Card
+                        key={Math.random()*(i+1)}
+                        mageSrc={it.imageSrc}
+                        alt={it.imageAlt}
+                        name={it.name}
+                        description={it.description}
+                        price={it.price}
+                        clicked={handler}
+                    />
+                });
+
+            default:
+                return [];
+        }
     };
 
 
@@ -54,6 +75,9 @@ const MainPage = (props) => {
         ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
     ];
 
+    const pizzasCards = generateCardsData(pizzas, Card, purchaseHandler);
+    const bundlesCards = generateCardsData(bundles, Card, purchaseHandler);
+    const altFoodCards = generateCardsData(altfood, Card, purchaseHandler);
 
     return(
         <AUX>
@@ -70,19 +94,19 @@ const MainPage = (props) => {
             <FoodGrid 
                 id='pizzas'
                 title='Pizza'
-                cards={pizzas}
+                data={pizzasCards}
                 elementsInRow={4}
             />
             <FoodGrid 
                 id='bundles'
                 title='Bundles'
-                cards={bundles}
+                data={bundlesCards}
                 elementsInRow={4}
             />
             <FoodGrid 
                 id='altfood'
                 title='AltFood'
-                cards={altfood}
+                data={altFoodCards}
                 elementsInRow={4}
             />
         </AUX>
