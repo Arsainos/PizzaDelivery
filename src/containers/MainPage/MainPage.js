@@ -9,6 +9,7 @@ import FoodGrid from '../../components/FoodGrid/FoodGrid.js';
 import Modal from '../../components/UI/Modal/Modal.js';
 import Card from '../../components/UI/Cards/Card/Card.js';
 import CardOrder from '../../components/UI/Cards/CardOrder/CardOrder.js';
+import BundleOrder from '../../components/UI/Cards/BundleOrder/BundleOrder.js';
 
 // import helpers and utilities
 import {generateCardsData} from '../../utils/helpres.js';
@@ -27,6 +28,12 @@ const MainPage = (props) => {
         updateMainPageState({purchasing: true, purchasingItem: generateCardsData([currentCard], CardOrder, purchaseContinueHandler)});
     };
 
+    const purchaseBundleHandler = (currentCard) => {
+        console.log(currentCard);
+
+        updateMainPageState({purchasing: true, purchasingItem: generateCardsData([currentCard], BundleOrder, purchaseContinueHandler)});
+    }
+
     const purchaseCancelHandler = () => {
         updateMainPageState({purchasing: false, purchasingItem: null});
     };
@@ -37,27 +44,25 @@ const MainPage = (props) => {
     };
 
     const pizzas = [
-        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
+        {imageSrc:'', imageAlt:`pizza`, name:`Margaritta`, description:`Proident pariatur commodo culpa reprehenderit.`, price:`10`}
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Veniam enim aliquip velit dolore fugiat.`, price:`15`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`Aute excepteur tempor eu culpa consequat culpa mollit pariatur ut nostrud id duis magna.`, price:`12`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Laboris consectetur anim dolor voluptate mollit esse.`, price:`15`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Four seasons`, description:`Ex sint anim nisi minim cupidatat duis.`, price:`12`, }
     ];
 
     const bundles = [
-        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
-    ];
+        {imageSrc:'', imageAlt:`pizza`, name:`High Five`, list:pizzas, description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Longwave`, list:[pizzas[0],pizzas[2], pizzas[4]], description:`Ipsum nulla tempor nostrud aliqua.`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`ShortWave`, list:[pizzas[0], pizzas[1]], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, }
+        ];
 
     const altfood = [
-        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, clicked: purchaseHandler}
-        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, clicked: purchaseHandler}
+        {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, }
+        ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, }
     ];
 
     return(
@@ -81,7 +86,7 @@ const MainPage = (props) => {
             <FoodGrid 
                 id='bundles'
                 title='Bundles'
-                data={generateCardsData(bundles, Card, purchaseHandler)}
+                data={generateCardsData(bundles, Card, purchaseBundleHandler)}
                 elementsInRow={4}
             />
             <FoodGrid 

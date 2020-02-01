@@ -4,6 +4,7 @@ import React from 'react';
 import Card from '../components/UI/Cards/Card/Card.js';
 import PromoCard from '../components/UI/Cards/PromoCard/PromoCard.js';
 import CardOrder from '../components/UI/Cards/CardOrder/CardOrder.js';
+import BundleOrder from '../components/UI/Cards/BundleOrder/BundleOrder.js';
 
 export const generateCardsData = (inputs, cardType, handler) => {
     switch(cardType) {
@@ -39,6 +40,19 @@ export const generateCardsData = (inputs, cardType, handler) => {
                 name={it.name}
                 description={it.description}
                 price={it.price}
+                continueClick={handler}
+                />
+            });
+
+        case BundleOrder:
+            return inputs.map((it,i) => {
+                return <BundleOrder
+                key={Math.random()+'_'+(i+1)}
+                iamgeSrc={it.imageSrc}
+                alt={it.iamgeAlt}
+                name={it.name}
+                description={it.description}
+                list={it.list}
                 continueClick={handler}
                 />
             });
