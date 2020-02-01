@@ -1,0 +1,32 @@
+.BundleOrder {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.ImageContainer {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.InnerImage {
+    width: 400px;
+    height: auto;
+}
+
+.Checkout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.CheckoutPrice {
+    font-weight: 700;
+    text-decoration: overline;
+}
+
+.CheckoutMoney {
+    font-weight: 700;
+}

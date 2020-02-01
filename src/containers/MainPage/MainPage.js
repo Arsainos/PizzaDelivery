@@ -31,8 +31,8 @@ const MainPage = (props) => {
         updateMainPageState({purchasing: false, purchasingItem: null});
     };
 
-    const purchaseContinueHandler = () => {
-        console.log(`pizza add to order`);
+    const purchaseContinueHandler = (...data) => {
+        console.log(data);
         updateMainPageState({purchasing: false, purchasingItem: null});
     };
 
