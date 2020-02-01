@@ -2,6 +2,7 @@ import React from 'react';
 
 // import components
 import GridFood from '../../components/FoodGrid/FoodGrid.js';
+import PromoCard from '../../components/UI/Cards/PromoCard/PromoCard.js';
 
 const Promotions = (props) => {
     const promoArray = [
@@ -10,15 +11,14 @@ const Promotions = (props) => {
         {title: 'Night watch', description:'Order pizza in night time (from 24:00 to 06:00) and get -50% discount'},
     ]
     
-    let promoCards = [];
-
-    promoArray.forEach((promo) => {
-        const newPromoCard = (
-            <div key={Math.random()+'_'+promo.title}><h1>{promo.title}</h1></div>
-        );
-
-        promoCards.push(newPromoCard);
-    })
+    let promoCards = promoArray.map((it, i) => {
+        return <PromoCard
+            key={Math.random() + '_' + (i+1)}
+            title={it.title}
+            description={it.description}
+            imageSrc={''}
+        />
+    });
     
     return (
         <GridFood 

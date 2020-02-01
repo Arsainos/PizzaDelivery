@@ -1,18 +1,18 @@
 .Promotion {
-    width: 400px;
-    margin-right: 30px;
+    width: 350px;
+    margin-right: 5px;
     margin-bottom: 35px;
   }
 
   .PromotionImage {
     width: 100%;
     height: auto;
-    border-radius: 8px;
   }
 
   .PromotionImageImg {
     width: 100%;
     height: auto;
+    border-radius: 16px;
   }
 
   .PromotionTitle {

@@ -8,12 +8,12 @@ import promoImg from '../../../../assets/mocks/promo.jpeg';
 
 const PromoCard = (props) => {
     return(
-        <div className={classes.Promo}>
-            <div className={classes.PromoImage}>
-                <img className={classes.PromoImageImg} src={promoImg} alt={'promo img'}/>
+        <div className={classes.Promotion}>
+            <div className={classes.PromotionImage}>
+                <img className={classes.PromotionImageImg} src={promoImg} alt={'promo img'}/>
             </div>          
-            <h3 className={classes.PromoTitle}>{props.title}</h3>
-            <div className={classes.PromoDescription}>
+            <h3 className={classes.PromotionTitle}>{props.title}</h3>
+            <div className={classes.PromotionDescription}>
                 {props.description}
             </div>
         </div>
