@@ -4,7 +4,7 @@ import React from 'react';
 import classes from './Card.module.css';
 
 // import image
-import pizzaImage from '../../../assets/mocks/pizzaMock.jpg';
+import pizzaImage from '../../../../assets/mocks/pizzaMock.jpg';
 
 const card = (props) => {
     return (
