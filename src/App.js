@@ -19,9 +19,14 @@ const asyncPromotionsPage = asyncComponent(() => {
   return import ('./containers/Promotions/Promotion.js');
 })
 
+const asyncCheckoutPage = asyncComponent(() => {
+  return import ('./containers/Checkout/Checkout.js');
+})
+
 function App() {
   let routes = (
     <Switch>
+      <Route path="/checkout" component={asyncCheckoutPage} />
       <Route path="/promotions" component={asyncPromotionsPage} />
       <Route path="/" exact component={asyncMainPage} />
     </Switch>
