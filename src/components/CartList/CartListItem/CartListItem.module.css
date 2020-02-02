@@ -14,27 +14,6 @@ input[type="radio"].VisuallyHidden {
   overflow: hidden;
 }
 
-.Container {
-    width:700px;
-    margin:0 auto;
-}
-
-.Cart {
-    width: 700px;
-    margin: 0 auto;
-}
-
-.CartHeader {
-
-}
-
-.CartList {
-    padding: 0;
-    margin: 0 0 70px 0;
-    list-style: none;
-    border-top: 1px solid #f1f2f5;
-}
-
 .CartListItem {
     display: flex;
     justify-content: space-between;
@@ -70,10 +49,6 @@ input[type="radio"].VisuallyHidden {
     opacity: 0.5;
 }
 
-.CartControls {
-
-}
-
 .CartControlsButton {
     position: relative;
     width: 30px;
@@ -105,14 +80,6 @@ input[type="radio"].VisuallyHidden {
     margin-right: 10px;
 }
 
-.CartMoney {
-
-}
-
-.CartCurrency {
-
-}
-
 .CartDeleteButton {
     position: relative;
     width: 20px;
@@ -137,39 +104,3 @@ input[type="radio"].VisuallyHidden {
     transform: translate(-50%, -50%);
     /* background-image: url("../img/bin.svg"); */
 }
-
-.CartCheckout {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.CartCheckoutSum {
-    margin-bottom: 20px;
-}
-
-.CartCheckoutText {
-    margin-right: 10px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.CartCheckoutMoney,
-.CartCheckoutCurrency {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ff6900;
-}
-
-.CartOrderButton {
-    min-width: 110px;
-    min-height: 40px;
-    border: none;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #ff6900;
-    cursor: pointer;
-}
-
-
-
