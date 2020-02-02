@@ -22,6 +22,8 @@ const BundleOrder = (props) => {
                     key={pizza.Name + '_' + i}
                     name={pizza.name}
                     description={pizza.description}
+                    imageSrc={pizza.imageSrc}
+                    imageAlt={pizza.imageAlt}
                 />
             )
         })  
@@ -30,7 +32,7 @@ const BundleOrder = (props) => {
     return (
         <div className={classes.BundleOrder}>
             <div className={classes.ImageContainer}>
-                <img className={classes.InnerImage} src={pizzaImage} alt="Pizza" />
+                <img className={classes.InnerImage} src={props.imageSrc} alt={props.imageAlt} />
             </div>
         <div className={classesOrder.InfoContainer}>
           <h2 className={classesOrder.ProductName}>{props.name}</h2>

@@ -36,8 +36,8 @@ export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
             return inputs.map((it, i) => {
                 return <CardOrder
                 key={Math.random()+'_'+(i+1)}
-                iamgeSrc={it.imageSrc}
-                alt={it.iamgeAlt}
+                imageSrc={it.imageSrc}
+                alt={it.imageAlt}
                 name={it.name}
                 description={it.description}
                 price={it.price}
@@ -49,8 +49,8 @@ export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
             return inputs.map((it,i) => {
                 return <BundleOrder
                 key={Math.random()+'_'+(i+1)}
-                iamgeSrc={it.imageSrc}
-                alt={it.iamgeAlt}
+                imageSrc={it.imageSrc}
+                alt={it.imageAlt}
                 name={it.name}
                 description={it.description}
                 list={it.list}

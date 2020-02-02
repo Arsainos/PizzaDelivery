@@ -9,7 +9,7 @@ import pizzaImage from '../../../../assets/mocks/pizzaMock.jpg';
 const CardSmall = (props) => {
     return(
         <li className={classes.CardSmall}>
-            <img className={classes.Image} src={pizzaImage} alt="Pizza" />
+            <img className={classes.Image} src={props.imageSrc} alt={props.imageAlt} />
             <div className={classes.Wraper}>
                 <h3 className={classes.Name}>{props.name}</h3>
                 <div className={classes.Description}>{props.description}</div>

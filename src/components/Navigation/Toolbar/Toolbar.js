@@ -6,6 +6,7 @@ import classes from './Toolbar.module.css';
 // import components
 import Button from '../../UI/Button/Button.js';
 import NavigationItems from '../NavigationItems/NavigationItems.js';
+import Logo from '../../UI/Logo/Logo.js';
 
 // import redux
 import {connect} from 'react-redux';
@@ -17,7 +18,7 @@ class Toolbar extends Component {
                 <div className={classes.Ribon}/>
                 <div className={classes.TopPanel}>
                     <div>
-                        <h1>Logo</h1>
+                        <Logo />
                     </div>
                         <div>
                         <Button><h1>{`Cart ${this.props.cart.size}`}</h1></Button>

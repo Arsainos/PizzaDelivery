@@ -11,7 +11,7 @@ const card = (props) => {
         <div className={classes.Product}>
             <div className={classes.ProductInner}>
                 <div className={classes.ProductIamge}>
-                    <img className={classes.ProductImageImg} src={pizzaImage} alt={props.alt} />
+                    <img className={classes.ProductImageImg} src={props.imageSrc} alt={props.alt} />
                 </div>
                 <h3 className={classes.ProductName}>{props.name}</h3>
                 <div className={classes.ProductDescription}>{props.description}</div>

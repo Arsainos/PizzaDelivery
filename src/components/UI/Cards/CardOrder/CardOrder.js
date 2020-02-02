@@ -76,7 +76,7 @@ const CardOrder = (props) => {
     return(
         <div className={classes.CardOrder} >
             <div className={classes.ImageContainer} >
-                <img className={classes.InnerImage}  src={pizzaImage} alt="Small" />
+                <img className={classes.InnerImage}  src={props.imageSrc} alt={props.imageAlt} />
             </div>
             <div className={classes.InfoContainer} >
                 <h2 className={classes.ProductName} >{props.name}</h2>
