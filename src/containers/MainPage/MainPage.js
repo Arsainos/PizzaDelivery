@@ -17,7 +17,7 @@ import {generateCardsData} from '../../utils/helpres.js';
 
 // import redux
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/foodReducer.js';
+import * as actions from '../../store/actions/food.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
