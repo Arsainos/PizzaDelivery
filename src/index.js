@@ -4,8 +4,11 @@ import { BrowserRouter} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// storages with redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import foodReducer from './store/reducers/food.js';
 
 // for react-toolkit
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
@@ -15,7 +18,7 @@ const rootReducer = combineReducers(
         ingredient:null,
         auth:null,
         order:null,
-        food:null
+        food:foodReducer
     }
 );
 

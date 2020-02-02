@@ -62,3 +62,10 @@ export const generateCardsData = (inputs, cardType, handler) => {
             return [];   
     }
 }
+
+export const updateObject  = (oldObject, updateProperties) => {
+    return {
+        ...oldObject,
+        ...updateProperties
+    };
+};
