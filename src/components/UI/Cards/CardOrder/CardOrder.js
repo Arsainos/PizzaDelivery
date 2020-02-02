@@ -100,7 +100,12 @@ const CardOrder = (props) => {
                         {toppingCheckboxes}
                     </ul>
                 </div>
-                <button className={classes.AddButton}  onClick={() => props.continueClick(props, cardOrderState)}>{`Add to Cart for `+cardOrderState.price}</button>
+                <button className={classes.AddButton}  
+                    onClick={() => props.continueClick(
+                        {...props, 
+                        price:cardOrderState.price, 
+                        summary:cardOrderState.summary, 
+                        additions: cardOrderState.additions})}>{`Add to Cart for `+cardOrderState.price}</button>
             </div>
         </div>
     )

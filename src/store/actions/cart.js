@@ -1,15 +1,21 @@
 import * as actionTypes from './actionTypes.js';
 
-export const addItemToCart = (item) => {
+const addItemToCart = (item) => {
     return {
         type: actionTypes.ADD_ITEM_TO_CART,
         item: item
     };
 };
 
-export const removeItemFromCart = (item) => {
+const removeItemFromCart = (item) => {
     return {
         type: actionTypes.REMOVE_ITEM_FROM_CART,
         item: item
     };
 };
+
+export const onAddItemToCart = (item) => {
+    return dispatch => {
+        dispatch(addItemToCart(item));
+    }
+}

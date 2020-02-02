@@ -18,6 +18,7 @@ import {generateCardsData} from '../../utils/helpres.js';
 // import redux
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/food.js';
+import * as cartActions from '../../store/actions/cart.js';
 
 // import images
 import carousel1 from '../../assets/Carousel/carousel1.jpg';
@@ -50,9 +51,19 @@ class MainPage extends Component {
         this.setState({purchasing: false, purchasingItem: null});
     };
 
-    purchaseContinueHandler = (...data) => {
+    purchaseContinueHandler = (data) => {
         console.log(data);
         this.setState({purchasing: false, purchasingItem: null});
+
+        this.props.onAddFoodToCart(
+            {
+                name: data.name, 
+                description:data.description, 
+                price: data.price, 
+                additions: data.additions,
+                summary: data.summary,
+                list: data.list
+            });
     };
 
     render() {
@@ -119,7 +130,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onInitFood: () => dispatch(actions.initFood())
+        onInitFood: () => dispatch(actions.initFood()),
+        onAddFoodToCart: (item) => dispatch(cartActions.onAddItemToCart(item))
     };
 };
 
