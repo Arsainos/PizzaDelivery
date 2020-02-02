@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 // storages with redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 import foodReducer from './store/reducers/food.js';
 
 // for react-toolkit
@@ -22,7 +23,7 @@ const rootReducer = combineReducers(
     }
 );
 
-const store = createStore(rootReducer,composeEnhancers());
+const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
 
 const app = (
     <Provider store={store}>

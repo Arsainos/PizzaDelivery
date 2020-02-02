@@ -23,4 +23,4 @@ export const foodStore = {
         ,{imageSrc:'', imageAlt:`drink`, name:`Mineral Water`, description:`Do reprehenderit reprehenderit incididunt commodo quis.`, price:1, }
         ,{imageSrc:'', imageAlt:`drink`, name:`Red Bull`, description:`Laborum in excepteur consequat mollit consequat reprehenderit excepteur elit labore cillum commodo aliquip ea ut.`, price:2, }   
     ]
-}
+};
