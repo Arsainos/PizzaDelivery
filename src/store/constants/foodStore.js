@@ -7,9 +7,9 @@ export const foodStore = {
         ,{imageSrc:'', imageAlt:`pizza`, name:`Four seasons`, description:`Ex sint anim nisi minim cupidatat duis.`, price:11, }
     ],
     bundles:  [
-        {imageSrc:'', imageAlt:`bundle`, name:`High Five`, list:[`Margarita`,`Proshuto`,`Fungi`,`Cheesy cheese`,`Four seasons`], description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, }
-        ,{imageSrc:'', imageAlt:`bundle`, name:`Longwave`, list:[`Margarita`,`Fungi`, `Four seasons`], description:`Ipsum nulla tempor nostrud aliqua.`, }
-        ,{imageSrc:'', imageAlt:`bundle`, name:`Shortwave`, list:[`Margarita`,`Proshuto`], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, }
+        {imageSrc:'', imageAlt:`bundle`, name:`High Five`, list:[`Margaritta`,`Proshuto`,`Fungi`,`Cheesy cheese`,`Four seasons`], description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, }
+        ,{imageSrc:'', imageAlt:`bundle`, name:`Longwave`, list:[`Margaritta`,`Fungi`, `Four seasons`], description:`Ipsum nulla tempor nostrud aliqua.`, }
+        ,{imageSrc:'', imageAlt:`bundle`, name:`Shortwave`, list:[`Margaritta`,`Proshuto`], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, }
     ],
     altFoods: [
         {imageSrc:'', imageAlt:`altfood`, name:`French Fries`, description:`Quis in sunt consectetur quis consequat non cillum tempor dolor esse aliqua.`, price:3, }

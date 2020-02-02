@@ -56,28 +56,6 @@ class MainPage extends Component {
     };
 
     render() {
-        const pizzas = [
-            {imageSrc:'', imageAlt:`pizza`, name:`Margaritta`, description:`Proident pariatur commodo culpa reprehenderit.`, price:10}
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Veniam enim aliquip velit dolore fugiat.`, price:15, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`Aute excepteur tempor eu culpa consequat culpa mollit pariatur ut nostrud id duis magna.`, price:12, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`Laboris consectetur anim dolor voluptate mollit esse.`, price:13, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Four seasons`, description:`Ex sint anim nisi minim cupidatat duis.`, price:11, }
-        ];
-    
-        const bundles = [
-            {imageSrc:'', imageAlt:`pizza`, name:`High Five`, list:pizzas, description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Longwave`, list:[pizzas[0],pizzas[2], pizzas[4]], description:`Ipsum nulla tempor nostrud aliqua.`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`ShortWave`, list:[pizzas[0], pizzas[1]], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, }
-            ];
-    
-        const altfood = [
-            {imageSrc:'', imageAlt:`pizza`, name:`Pizza 1`, description:`Peperroni`, price:`10`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Proshuto`, description:`with onions`, price:`15`, }
-            ,{imageSrc:'', imageAlt:`pizza`, name:`Fungi`, description:`eat more fungi`, price:`12`, }
-        ];
-
         let mainPage = this.props.error ? <p>Sorry, page can not be loaded!</p> : <Spinner />
 
         if(this.props.pizzas) {
@@ -92,13 +70,19 @@ class MainPage extends Component {
                     <FoodGrid 
                         id='bundles'
                         title='Bundles'
-                        data={generateCardsData(bundles, Card,this.purchaseBundleHandler)}
+                        data={generateCardsData(this.props.bundles, Card, this.purchaseBundleHandler, this.props.pizzas)}
                         elementsInRow={4}
                     />
                     <FoodGrid 
                         id='altfood'
                         title='AltFood'
                         data={generateCardsData(this.props.altFoods, Card, this.purchaseContinueHandler)}
+                        elementsInRow={4}
+                    />
+                    <FoodGrid
+                        id='drinks'
+                        title='Drinks'
+                        data={generateCardsData(this.props.drinks, Card, this.purchaseContinueHandler)}
                         elementsInRow={4}
                     />
                 </AUX>

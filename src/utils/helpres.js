@@ -6,7 +6,7 @@ import PromoCard from '../components/UI/Cards/PromoCard/PromoCard.js';
 import CardOrder from '../components/UI/Cards/CardOrder/CardOrder.js';
 import BundleOrder from '../components/UI/Cards/BundleOrder/BundleOrder.js';
 
-export const generateCardsData = (inputs, cardType, handler) => {
+export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
     switch(cardType) {
         case Card:
             return inputs.map((it, i) => {
@@ -18,7 +18,7 @@ export const generateCardsData = (inputs, cardType, handler) => {
                     description={it.description}
                     price={it.price}
                     clicked={handler}
-                    list={it.list}
+                    list={it.list ? aditionalData.filter((data) => Array.from(it.list).includes(data.name)) : null}
                 />
             });
 
