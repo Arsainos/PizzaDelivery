@@ -33,13 +33,13 @@ const addItemToCart = (state, action) => {
 
 const removeItemFromCart = (state, action) => {
     const updateMap = new Map(state.cart);
-    let searchKey = false;
+    let searchKey = null;
     
-    updateMap.keys().forEach((key) => {
+    [...updateMap.keys()].forEach((key) => {
         if(lang.isEqual(key,action.item)) {
             searchKey = key;
         }
-    })
+    });
 
     if(searchKey) {
         const searchValue = updateMap.get(searchKey);

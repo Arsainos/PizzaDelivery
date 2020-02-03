@@ -19,3 +19,9 @@ export const onAddItemToCart = (item) => {
         dispatch(addItemToCart(item));
     }
 }
+
+export const onRemoveItemFromCart = (item) => {
+    return dispatch => {
+        dispatch(removeItemFromCart(item));
+    }
+}
