@@ -12,6 +12,7 @@ const CartList = (props) => {
     props.list.forEach((value, key, map) => {
         cartListItems.push((
             <CartListItem 
+                key={`CartListItem_${value}`}
                 data={key}
                 counter={value}
                 onIncrement={props.onIncrementItem}
