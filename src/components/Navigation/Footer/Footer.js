@@ -5,9 +5,7 @@ import classes from './Footer.module.css';
 
 const footer = (props) => (
     <footer className={classes.Footer}>
-        <div>
-            <h1>Footer</h1>
-        </div>
+        <p className={classes.FooterText}>Your footer</p>
     </footer>
 );
 
