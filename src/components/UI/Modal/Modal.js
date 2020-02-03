@@ -16,7 +16,7 @@ class Modal extends Component {
                 <div 
                     className={classes.Modal}
                     style={{
-                        opacity: this.props.show ? '1' : '0'
+                        display: this.props.show ? 'block' : 'none'
                     }}
                     >
                     {this.props.children}
