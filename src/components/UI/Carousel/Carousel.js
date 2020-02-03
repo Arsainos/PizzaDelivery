@@ -18,7 +18,8 @@ class Carousel extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true,
-            variableWidth: true
+            variableWidth: true,
+            adaptiveHeight: true
           };
         return (
             <Slider {...settings}>
