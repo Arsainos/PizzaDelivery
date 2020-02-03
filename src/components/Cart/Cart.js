@@ -5,6 +5,7 @@ import classes from './Cart.module.css';
 
 // import components
 import CartList from '../CartList/CartList.js';
+import { NavLink } from 'react-router-dom';
 
 const Cart = (props) => {
     const getTotalPrice = (list) => {
@@ -31,7 +32,12 @@ const Cart = (props) => {
                     <span className={classes.CartCheckoutText}>Order price:</span>
                     <span className={classes.CartCheckoutMoney}>{getTotalPrice(props.list)}</span><span className={classes.CartCheckoutCurrency}>$</span>
                 </div>
-                <button className={classes.CartOrderButton} onClick={() => props.onOrder()}>Order</button>
+                <NavLink
+                    to={`/orders`}
+                    exact
+                >
+                    <button className={classes.CartOrderButton} onClick={() => props.onOrder()}>Order</button>
+                </NavLink>           
             </div>
         </div>
     )

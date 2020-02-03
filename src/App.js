@@ -23,11 +23,16 @@ const asyncCheckoutPage = asyncComponent(() => {
   return import ('./containers/Checkout/Checkout.js');
 })
 
+const asyncOrdersPage = asyncComponent(() => {
+  return import ('./containers/Orders/Orders.js');
+})
+
 function App() {
   let routes = (
     <Switch>
       <Route path="/checkout" component={asyncCheckoutPage} />
       <Route path="/promotions" component={asyncPromotionsPage} />
+      <Route path="/orders" component={asyncOrdersPage} />
       <Route path="/" exact component={asyncMainPage} />
     </Switch>
   );

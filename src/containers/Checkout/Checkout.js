@@ -12,6 +12,11 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/cart.js';
 
 class Checkout extends Component {
+
+    onOrderHandler() {
+
+    }
+
     render() {
         let cartPage = this.props.error ? <p>Sorry, we can not load this page!</p> : <Spinner />
         
@@ -22,6 +27,7 @@ class Checkout extends Component {
                     onIncrement={this.props.onAddItemToCart}
                     onDecrement={this.props.onRemoveItemFromCart}
                     onDelete={this.props.onDeleteItemFromCart}
+                    onOrder={this.onOrderHandler}
                 />
             )
         }
