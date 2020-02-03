@@ -3,8 +3,6 @@ import React from 'react';
 // import styles
 import classes from './CartListItem.module.css';
 
-import bin from '../../../assets/img/bin.svg';
-
 const CartListItem = (props) => {
     return (
         <li className={classes.CartListItem}>

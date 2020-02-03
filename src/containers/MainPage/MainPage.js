@@ -35,15 +35,11 @@ class MainPage extends Component {
         this.props.onInitFood();
     }
 
-    purchaseHandler = (currentCard) => {
-        console.log(currentCard);
-        
+    purchaseHandler = (currentCard) => { 
         this.setState({purchasing: true, purchasingItem: generateCardsData([currentCard], CardOrder, this.purchaseContinueHandler)});
     };
 
     purchaseBundleHandler = (currentCard) => {
-        console.log(currentCard);
-
         this.setState({purchasing: true, purchasingItem: generateCardsData([currentCard], BundleOrder, this.purchaseContinueHandler)});
     }
 
@@ -52,7 +48,6 @@ class MainPage extends Component {
     };
 
     purchaseContinueHandler = (data) => {
-        console.log(data);
         this.setState({purchasing: false, purchasingItem: null});
 
         this.props.onAddFoodToCart(
