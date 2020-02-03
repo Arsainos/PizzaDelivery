@@ -4,8 +4,11 @@ body {
   
   .Product {
     width: 200px;
-  
+    min-height: 365px;
     margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .ProductInner {
@@ -15,6 +18,10 @@ body {
   .ProductImage, .ProductImageImg {
     width: 100%;
     height: auto;
+  }
+
+  .ProductImageImg {
+    height: 200px;
   }
   
   .ProductName {
@@ -51,5 +58,6 @@ body {
     border-radius: 10px;
     color: #ff6900;
     background-color: transparent;
+    cursor: pointer;
   }
   
