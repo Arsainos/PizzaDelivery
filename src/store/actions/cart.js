@@ -21,6 +21,12 @@ const deleteItemFromCart = (item) => {
     }
 }
 
+const clearCart = () => {
+    return {
+        type: actionTypes.CLEAR_CART
+    }
+}
+
 export const onAddItemToCart = (item) => {
     return dispatch => {
         dispatch(addItemToCart(item));
@@ -36,5 +42,11 @@ export const onRemoveItemFromCart = (item) => {
 export const onDeleteItemFromCart = (item) => {
     return dispatch => {
         dispatch(deleteItemFromCart(item));
+    }
+}
+
+export const onClearCart = () => {
+    return dispatch => {
+        dispatch(clearCart());
     }
 }

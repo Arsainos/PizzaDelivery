@@ -76,6 +76,13 @@ const deleteItemFromCart = (state, action) => {
     })
 }
 
+const clearCart = (state, action) => {
+    return updateObject(state, {
+        cart: new Map(),
+        error:false
+    })
+}
+
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.ADD_ITEM_TO_CART:
@@ -86,6 +93,9 @@ const reducer = (state = initialState, action) => {
 
         case actionTypes.DELETE_ITEM_FROM_CART:
             return deleteItemFromCart(state, action);
+
+        case actionTypes.CLEAR_CART:
+            return clearCart(state, action);
 
         default:
             return state;

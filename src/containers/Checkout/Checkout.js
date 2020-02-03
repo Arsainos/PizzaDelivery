@@ -12,11 +12,6 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/cart.js';
 
 class Checkout extends Component {
-
-    onOrderHandler() {
-
-    }
-
     render() {
         let cartPage = this.props.error ? <p>Sorry, we can not load this page!</p> : <Spinner />
         
@@ -27,7 +22,7 @@ class Checkout extends Component {
                     onIncrement={this.props.onAddItemToCart}
                     onDecrement={this.props.onRemoveItemFromCart}
                     onDelete={this.props.onDeleteItemFromCart}
-                    onOrder={this.onOrderHandler}
+                    onOrder={this.props.onClearCart}
                 />
             )
         }
@@ -51,7 +46,8 @@ const mapDispatchToProps = dispatch => {
     return {
         onAddItemToCart: (item) => dispatch(actions.onAddItemToCart(item)),
         onRemoveItemFromCart: (item) => dispatch(actions.onRemoveItemFromCart(item)),
-        onDeleteItemFromCart: (item) => dispatch(actions.onDeleteItemFromCart(item))
+        onDeleteItemFromCart: (item) => dispatch(actions.onDeleteItemFromCart(item)),
+        onClearCart: () => dispatch(actions.onClearCart())
     }
 }
 
