@@ -56,6 +56,26 @@ const removeItemFromCart = (state, action) => {
     })
 };
 
+const deleteItemFromCart = (state, action) => {
+    const updateMap = new Map(state.cart);
+    let searchKey = null;
+
+    [...updateMap.keys()].forEach((key) => {
+        if(lang.isEqual(key,action.item)) {
+            searchKey = key;
+        }
+    });
+
+    if(searchKey) {
+        updateMap.delete(searchKey);
+    }
+
+    return updateObject(state, {
+        cart:updateMap,
+        error:false
+    })
+}
+
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.ADD_ITEM_TO_CART:
@@ -63,6 +83,9 @@ const reducer = (state = initialState, action) => {
 
         case actionTypes.REMOVE_ITEM_FROM_CART:
             return removeItemFromCart(state, action);
+
+        case actionTypes.DELETE_ITEM_FROM_CART:
+            return deleteItemFromCart(state, action);
 
         default:
             return state;

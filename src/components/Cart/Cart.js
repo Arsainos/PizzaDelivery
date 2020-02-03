@@ -23,6 +23,7 @@ const Cart = (props) => {
             <CartList 
                 onIncrementItem={props.onIncrement}
                 onDecrementItem={props.onDecrement}
+                onDeleteItem={props.onDelete}
                 list={props.list}
             />
             <div className={classes.CartCheckout}>

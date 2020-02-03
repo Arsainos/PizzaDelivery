@@ -21,6 +21,7 @@ class Checkout extends Component {
                     list={this.props.cart}
                     onIncrement={this.props.onAddItemToCart}
                     onDecrement={this.props.onRemoveItemFromCart}
+                    onDelete={this.props.onDeleteItemFromCart}
                 />
             )
         }
@@ -43,7 +44,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onAddItemToCart: (item) => dispatch(actions.onAddItemToCart(item)),
-        onRemoveItemFromCart: (item) => dispatch(actions.onRemoveItemFromCart(item))
+        onRemoveItemFromCart: (item) => dispatch(actions.onRemoveItemFromCart(item)),
+        onDeleteItemFromCart: (item) => dispatch(actions.onDeleteItemFromCart(item))
     }
 }
 

@@ -16,6 +16,7 @@ const CartList = (props) => {
                 counter={value}
                 onIncrement={props.onIncrementItem}
                 onDecrement={props.onDecrementItem}
+                onDelete={props.onDeleteItem}
             />
         ))
     })
