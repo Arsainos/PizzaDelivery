@@ -62,7 +62,8 @@ class MainPage extends Component {
                 price: data.price, 
                 additions: data.additions,
                 summary: data.summary,
-                list: data.list
+                list: data.list,
+                imageSrc: data.imageSrc
             });
     };
 
