@@ -12,7 +12,7 @@ const CartList = (props) => {
     props.list.forEach((value, key, map) => {
         cartListItems.push((
             <CartListItem 
-                key={`CartListItem_${value}`}
+                key={`CartListItem_${value}_${Math.random()}`}
                 data={key}
                 counter={value}
                 onIncrement={props.onIncrementItem}
