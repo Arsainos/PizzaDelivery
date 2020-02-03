@@ -30,9 +30,9 @@ export const foodStore = {
         ,{imageSrc: pizzaSeafood, imageAlt:`pizza`, name:`Poseidon`, description:`Ex sint anim nisi minim cupidatat duis.`, price:11, }
     ],
     bundles:  [
-        {imageSrc: bundleHighfive, imageAlt:`bundle`, name:`High Five`, list:[`Margaritta`,`Proshuto`,`Fungi`,`Cheesy cheese`,`Four seasons`], description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, }
-        ,{imageSrc: bundleLongwave, imageAlt:`bundle`, name:`Longwave`, list:[`Margaritta`,`Fungi`, `Four seasons`], description:`Ipsum nulla tempor nostrud aliqua.`, }
-        ,{imageSrc: bundleShortwave, imageAlt:`bundle`, name:`Shortwave`, list:[`Margaritta`,`Proshuto`], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, }
+        {imageSrc: bundleHighfive, imageAlt:`bundle`, name:`High Five`, list:[`Margaritta`,`Proshuto`,`Fungi`,`Cheesy cheese`,`Four seasons`], description:`Sint voluptate sit do in mollit fugiat veniam et laboris voluptate aute nisi occaecat.`, discount:0.9}
+        ,{imageSrc: bundleLongwave, imageAlt:`bundle`, name:`Longwave`, list:[`Margaritta`,`Fungi`, `Four seasons`], description:`Ipsum nulla tempor nostrud aliqua.`, discount:0.9 }
+        ,{imageSrc: bundleShortwave, imageAlt:`bundle`, name:`Shortwave`, list:[`Margaritta`,`Proshuto`], description:`Occaecat esse ullamco minim eu do adipisicing veniam commodo id.`, discount:0.9}
     ],
     altFoods: [
         {imageSrc: altFrench, imageAlt:`altfood`, name:`French Fries`, description:`Quis in sunt consectetur quis consequat non cillum tempor dolor esse aliqua.`, price:3, }

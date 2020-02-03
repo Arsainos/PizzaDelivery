@@ -4,19 +4,14 @@ import React from 'react';
 import classes from './BundleOrder.module.css';
 import classesOrder from '../CardOrder/CardOrder.module.css';
 
-// import image
-import pizzaImage from '../../../../assets/mocks/pizzaMock.jpg';
-
 // import components
 import CardSmall from '../CardSmall/CardSmall.js';
 
 const BundleOrder = (props) => {
-    let price = 0;
     let PizzasList = [];
     
     if(props.list.length > 0) {
         props.list.forEach((pizza , i) => {
-            price = price + pizza.price;
             PizzasList.push(
                 <CardSmall 
                     key={pizza.Name + '_' + i}
@@ -43,9 +38,9 @@ const BundleOrder = (props) => {
             </ul>
           </div>
           <div className={classes.Checkout}>
-            <span className={classes.CheckoutPrice}>{price}$</span><span className={classes.CheckoutMoney}>{price*0.9}$</span>
+            <span className={classes.CheckoutPrice}>{props.price}$</span><span className={classes.CheckoutMoney}>{props.price*props.discount}$</span>
           </div>
-          <button className={classesOrder.AddButton} onClick={() => props.continueClick(props)}>Add to Cart</button>
+          <button className={classesOrder.AddButton} onClick={() => props.continueClick({...props, price: props.price*props.discount})}>Add to Cart</button>
         </div>
       </div>
     )

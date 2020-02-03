@@ -18,7 +18,7 @@ const card = (props) => {
             </div>
             <div className={classes.ProductControls}>
                 <div className={classes.ProductCart}>
-                    <div className={classes.ProductPrice}>{props.price}<span className={classes.ProductCurrency}>$</span></div>
+                    <div className={classes.ProductPrice}>{props.discount ? props.price * props.discount : props.price}<span className={classes.ProductCurrency}>$</span></div>
                     <div className={classes.ProductToCart}>
                         <button type="button" className={[classes.ProductToCartButton, classes.ProductButton].join(' ')}
                             onClick={() => props.clicked(props)}

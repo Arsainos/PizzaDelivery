@@ -10,15 +10,29 @@ export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
     switch(cardType) {
         case Card:
             return inputs.map((it, i) => {
+                let itemList = [];
+                let price = 0;
+
+                if(it.list && aditionalData) {
+                    aditionalData
+                        .filter((data) => Array.from(it.list)
+                            .includes(data.name))
+                                .forEach((it)=>{
+                                    itemList.push(it);
+                                    price = price + Number.parseFloat(it.price);
+                                })
+                }
+
                 return <Card
                     key={Math.random()*(i+1)}
                     imageSrc={it.imageSrc}
                     alt={it.imageAlt}
                     name={it.name}
                     description={it.description}
-                    price={it.price}
+                    price={it.price ? it.price : price}
+                    discount={it.discount}
                     clicked={handler}
-                    list={it.list ? aditionalData.filter((data) => Array.from(it.list).includes(data.name)) : null}
+                    list={itemList.length > 0 ? itemList : null}
                 />
             });
 
@@ -55,6 +69,8 @@ export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
                 description={it.description}
                 list={it.list}
                 continueClick={handler}
+                price={it.price}
+                discount={it.discount}
                 />
             });
 
