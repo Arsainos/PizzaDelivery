@@ -2,32 +2,21 @@
     height: 128px;
     width: 100%;
     position: fixed;
-    top:0;
-    left:0;
-    background-color: #66bb6a;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 60px;
     box-sizing: border-box;
     z-index: 90;
 }
 
-.Ribon {
-    height: 12px;
-    width: 100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    background-color: #338a3e;
-}
-
 .TopPanel {
     height: 56px;
-    width: 100%;
-    position: fixed;
-    top:12px;
-    left:0;
+    top: 12px;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,13 +24,37 @@
     box-sizing: border-box;
 }
 
+.TopPanel p {
+    font-size: 20px;
+}
+
+.ToolbarWrap {
+    display: inline-block;
+    width: 100%;
+}
+
 .NavPanel {
     height: 60px;
-    width: 100%;
-    position: fixed;
-    top:68px;
+    top: 68px;
     left: 0;
-    background-color: #98ee99;
+    background-color: #ffffff;
     align-items: center;
     padding: 0 20px;
+    font-size: 20px;
+}
+
+.CartButton {
+    display: block;
+    text-align: center;
+    width: 110px;
+    min-height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #ff6900;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
