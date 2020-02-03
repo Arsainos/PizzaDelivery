@@ -88,19 +88,3 @@ input[type="radio"].VisuallyHidden {
     background-color: transparent;
     cursor: pointer;
 }
-
-.CartDeleteButton :hover {
-    opacity: 0.3;
-}
-
-.CartDeleteButton ::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* background-image: url("../img/bin.svg"); */
-}
