@@ -17,9 +17,9 @@ import altShawarma from '../../assets/img/shawarma.png';
 import altDog from '../../assets/img/dog.png';
 
 // import drinks
-import drinkCola from '../../assets/img/cola.jpg';
-import drinkWater from '../../assets/img/water.jpg';
-import drinkDrpepper from '../../assets/img/drpepper.jpg';
+import drinkCola from '../../assets/img/cola.png';
+import drinkWater from '../../assets/img/water.png';
+import drinkRedBull from '../../assets/img/bull.png';
 
 export const foodStore = {
     pizzas: [
@@ -44,6 +44,6 @@ export const foodStore = {
     drinks: [
         {imageSrc: drinkCola, imageAlt:`drink`, name:`Coca-cola`, description:`Cillum adipisicing eiusmod cupidatat velit velit laborum anim amet cillum elit nostrud cillum.`, price:1, }
         ,{imageSrc: drinkWater, imageAlt:`drink`, name:`Mineral Water`, description:`Do reprehenderit reprehenderit incididunt commodo quis.`, price:1, }
-        ,{imageSrc: drinkDrpepper, imageAlt:`drink`, name:`Dr Pepper`, description:`Laborum in excepteur consequat mollit consequat reprehenderit excepteur elit labore cillum commodo aliquip ea ut.`, price:2, }   
+        ,{imageSrc: drinkRedBull, imageAlt:`drink`, name:`Red Bull`, description:`Laborum in excepteur consequat mollit consequat reprehenderit excepteur elit labore cillum commodo aliquip ea ut.`, price:2, }   
     ]
 };
