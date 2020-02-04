@@ -10,7 +10,7 @@ const CartListItem = (props) => {
                 <img className={classes.CartItemImage} src={props.data.imageSrc} alt="Pizza" />
                 <div className={classes.CartImageNameWrapper}>
                     <h3 className={classes.CartProductName}>{props.data.name}</h3>
-                    <div className={classes.CartItemSummary}>{props.data.description}</div>
+                    <div className={classes.CartItemSummary}>{props.data.summary ? `${props.data.summary} ${props.data.additions ? `with additional ${props.data.additions.map((addition) => addition.name).join(',')}` : ``}` : props.data.description}</div>
                 </div>
             </div>
             <div className={classes.CartControls}>
