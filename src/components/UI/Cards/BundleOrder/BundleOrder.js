@@ -38,9 +38,9 @@ const BundleOrder = (props) => {
             </ul>
           </div>
           <div className={classes.Checkout}>
-            <span className={classes.CheckoutPrice}>{props.price}$</span><span className={classes.CheckoutMoney}>{props.price*props.discount}$</span>
+            <span className={classes.CheckoutPrice}>{props.price}$</span><span className={classes.CheckoutMoney}>{Math.round((props.price * props.discount) *10) /10}$</span>
           </div>
-          <button className={classesOrder.AddButton} onClick={() => props.continueClick({...props, price: props.price*props.discount})}>Add to Cart</button>
+          <button className={classesOrder.AddButton} onClick={() => props.continueClick({...props, price: Math.round((props.price * props.discount) *10) /10})}>Add to Cart</button>
         </div>
       </div>
     )
