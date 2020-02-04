@@ -42,7 +42,8 @@ export const generateCardsData = (inputs, cardType, handler, aditionalData) => {
                     key={Math.random() + '_' + (i+1)}
                     title={it.title}
                     description={it.description}
-                    imageSrc={''}
+                    imageSrc={it.imageSrc}
+                    imageAlt={it.imageAlt}
                 />
             });
 
