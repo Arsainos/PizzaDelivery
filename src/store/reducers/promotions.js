@@ -8,7 +8,7 @@ const initialState = {
 
 const setPromotion = (state, action) => {
     return updateObject(state, {
-        promotions: action.promotions.promotions,
+        promotions: action.promotions,
         error: false
     });
 };
