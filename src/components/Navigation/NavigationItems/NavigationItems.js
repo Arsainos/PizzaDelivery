@@ -28,6 +28,7 @@ class NavigationItems extends Component {
                     <NavigationItem type={'scrollabe'} link="/#section_bundles">Bundles</NavigationItem>
                     <NavigationItem type={'scrollabe'} link="/#section_altfoods">Alternatives</NavigationItem>
                     <NavigationItem type={'scrollabe'} link="/#section_drinks">Drinks</NavigationItem>
+                    <NavigationItem link="/promotions">Promotions</NavigationItem>
                     <NavigationItem link="/history">Orders history</NavigationItem>
                 </AUX>
             )
