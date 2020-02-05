@@ -11,13 +11,16 @@ import Spinner from '../../components/UI/Spinner/Spinner.js';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions/order.js';
 
+// import styles
+import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
+
 class OrdersHistory extends Component {
     componentDidMount() {
         this.props.onFetchOrders(this.props.token, this.props.userId);
     }
     
     render() {
-        let historyPage = <Spinner />;
+        let historyPage = <Spinner spinnerClass={spinnerClasses.LoaderMain} />;
 
         if(!this.props.loading) {
             historyPage = <History orders={this.props.orders}/>

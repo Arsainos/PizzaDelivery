@@ -12,6 +12,9 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/cart.js';
 import * as orderActions from '../../store/actions/order.js';
 
+// import styles
+import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
+
 class Checkout extends Component {
     onPurchase = (eventData) => {
         let orders = [];
@@ -30,7 +33,7 @@ class Checkout extends Component {
     }
     
     render() {
-        let cartPage = this.props.error ? <p>Sorry, we can not load this page!</p> : <Spinner />
+        let cartPage = this.props.error ? <p>Sorry, we can not load this page!</p> : <Spinner spinnerClass={spinnerClasses.LoaderMain} />
         
         if(this.props.cart) {
             cartPage = (

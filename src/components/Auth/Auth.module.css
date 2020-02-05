@@ -6,23 +6,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+}
   
-    border: 2px solid red;
-  }
-  
-  .SignUpForm {
+.SignUpForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
   
-  .SignUpFormButtonsWrap {
+.SignUpFormButtonsWrap {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
+}
   
-  .SignUpFormButtonSignUp {
+.SignUpFormButtonSignUp {
     width: auto;
     height: 40px;
     padding: 0 20px;
@@ -33,9 +31,9 @@
     background-color: #ff6900;
     font-size: 16px;
     cursor: pointer;
-  }
+}
   
-  .SignUpFormButtonSignIn {
+.SignUpFormButtonSignIn {
     width: auto;
     height: 40px;
     padding: 0 20px;
@@ -45,5 +43,11 @@
     background-color: #ffffff;
     font-size: 16px;
     cursor: pointer;
-  }
+}
+
+.ErrorMessage {
+    margin-bottom: 5px;
+    color: red;
+    font-weight: 700;
+}
   

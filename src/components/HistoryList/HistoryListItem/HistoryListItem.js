@@ -7,7 +7,7 @@ const historyListItem = (props) => {
  
     return (
         <li className={classes.OrderListItem}>
-            <div>
+            <div className={classes.OrderListWrapper}>
                 <img className={classes.OrderListImage} src={props.imageSrc} alt={props.imageAlt} />
                 <div>
                     <h3>{props.name}</h3>

@@ -2,18 +2,24 @@
     width: 70px;
     display: block;
     margin-right: 25px;
-  }
-  
-  .OrderListItem {
+}
+
+.OrderListItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #f1f2f5;
-  }
-  
-  .OrderListItemSummary {
+}
+
+.OrderListWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.OrderListItemSummary {
     font-size: 12px;
     line-height: 16px;
     opacity: .5;
-  }
+}

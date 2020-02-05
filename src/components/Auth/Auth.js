@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // import styles
 import classes from './Auth.module.css';
+import spinnerClasses from '../UI/Spinner/Spinner.module.css';
 
 // import helpers
 import { updateObject, checkValidity } from '../../utils/helpres.js';
@@ -66,7 +67,7 @@ class Auth extends Component {
     }
 
     render() {
-        let formElement = this.props.loading ? <Spinner /> : null;
+        let formElement = this.props.loading ? <Spinner spinnerClass={spinnerClasses.LoaderAuth} /> : null;
 
         if(!this.props.loading) {
             const formElementsArray = [];
@@ -94,7 +95,7 @@ class Auth extends Component {
 
             formElement = (
                 <form className={classes.SignUpForm} onSubmit={(event) => this.props.onSubmitForm(event, this.state.controls.email.value, this.state.controls.password.value, this.state.isSingup)}>
-                    <p>{this.props.error ? this.props.error.message : null}</p>
+                    <p className={classes.ErrorMessage}>{this.props.error ? this.props.error.message : null}</p>
                     {inputs}
                     <div className={classes.SignUpFormButtonsWrap}>
                         <button className={classes.SignUpFormButtonSignUp} type="submit" onClick={() => this.singUpClickHandler()}>

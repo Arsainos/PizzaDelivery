@@ -15,13 +15,16 @@ import {generateCardsData} from '../../utils/helpres.js';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/promotions.js';
 
+// import styles
+import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
+
 class Promotions extends Component {
     componentDidMount() {
         this.props.onPromotionsInit();
     }
     
     render() {
-        let promoPage = this.props.error ? <p>Sorry, can not load this page!</p> : <Spinner />;
+        let promoPage = this.props.error ? <p>Sorry, can not load this page!</p> : <Spinner spinnerClass={spinnerClasses.LoaderMain} />;
 
         if(this.props.promoArray) {
             promoPage = (

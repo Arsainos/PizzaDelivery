@@ -29,6 +29,7 @@ import carousel3 from '../../assets/Carousel/carousel3.jpg';
 
 //import styles
 import ModalClasses from '../../components/UI/Modal/Modal.module.css';
+import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
 
 class MainPage extends Component {
     state = {
@@ -69,7 +70,7 @@ class MainPage extends Component {
     };
 
     render() {
-        let mainPage = this.props.error ? <p>Sorry, page can not be loaded!</p> : <Spinner />
+        let mainPage = this.props.error ? <p>Sorry, page can not be loaded!</p> : <Spinner spinnerClass={spinnerClasses.LoaderMain} />
 
         if(this.props.pizzas) {
             mainPage = (
