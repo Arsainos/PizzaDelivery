@@ -12,6 +12,10 @@ class NavigationItems extends Component {
         let navItems = (
             <AUX>
                 <NavigationItem link="/" exact>Main</NavigationItem>
+                <NavigationItem type={'scrollabe'} link="/#section_pizzas">Pizzas</NavigationItem>
+                <NavigationItem type={'scrollabe'} link="/#section_bundles">Bundles</NavigationItem>
+                <NavigationItem type={'scrollabe'} link="/#section_altfoods">Alternatives</NavigationItem>
+                <NavigationItem type={'scrollabe'} link="/#section_drinks">Drinks</NavigationItem>
                 <NavigationItem link="/promotions">Promotions</NavigationItem>
             </AUX>
         );
@@ -20,7 +24,10 @@ class NavigationItems extends Component {
             navItems = (
                 <AUX>
                     <NavigationItem link="/" exact>Main</NavigationItem>
-                    <NavigationItem link="/promotions">Promotions</NavigationItem>
+                    <NavigationItem type={'scrollabe'} link="/#section_pizzas">Pizzas</NavigationItem>
+                    <NavigationItem type={'scrollabe'} link="/#section_bundles">Bundles</NavigationItem>
+                    <NavigationItem type={'scrollabe'} link="/#section_altfoods">Alternatives</NavigationItem>
+                    <NavigationItem type={'scrollabe'} link="/#section_drinks">Drinks</NavigationItem>
                     <NavigationItem link="/history">Orders history</NavigationItem>
                 </AUX>
             )

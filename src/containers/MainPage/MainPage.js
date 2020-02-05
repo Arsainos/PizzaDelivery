@@ -11,9 +11,11 @@ import Card from '../../components/UI/Cards/Card/Card.js';
 import CardOrder from '../../components/UI/Cards/CardOrder/CardOrder.js';
 import BundleOrder from '../../components/UI/Cards/BundleOrder/BundleOrder.js';
 import Spinner from '../../components/UI/Spinner/Spinner.js';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 // import helpers and utilities
 import {generateCardsData} from '../../utils/helpres.js';
+import PageSection from '../../utils/pageSection.js';
 
 // import redux
 import { connect } from 'react-redux';
@@ -32,7 +34,8 @@ class MainPage extends Component {
     }
 
     componentDidMount() {
-        this.props.onInitFood();
+        configureAnchors({offset: -60, scrollDuration: 300});
+        this.props.onInitFood();  
     }
 
     purchaseHandler = (currentCard) => { 
@@ -68,30 +71,47 @@ class MainPage extends Component {
         if(this.props.pizzas) {
             mainPage = (
                 <AUX>
-                    <FoodGrid 
-                        id='pizzas'
-                        title='Pizza'
-                        data={generateCardsData(this.props.pizzas, Card, this.purchaseHandler)}
-                        elementsInRow={4}
-                    />
-                    <FoodGrid 
-                        id='bundles'
-                        title='Bundles'
-                        data={generateCardsData(this.props.bundles, Card, this.purchaseBundleHandler, this.props.pizzas)}
-                        elementsInRow={4}
-                    />
-                    <FoodGrid 
-                        id='altfood'
-                        title='AltFood'
-                        data={generateCardsData(this.props.altFoods, Card, this.purchaseContinueHandler)}
-                        elementsInRow={4}
-                    />
-                    <FoodGrid
-                        id='drinks'
-                        title='Drinks'
-                        data={generateCardsData(this.props.drinks, Card, this.purchaseContinueHandler)}
-                        elementsInRow={4}
-                    />
+                    <ScrollableAnchor id={'section_pizzas'} key={'section_pizzas'}>
+                        <PageSection content={
+                            <FoodGrid 
+                                id='pizzas'
+                                title='Pizza'
+                                data={generateCardsData(this.props.pizzas, Card, this.purchaseHandler)}
+                                elementsInRow={4}
+                            />
+                        }/>
+                    </ScrollableAnchor>
+                    <ScrollableAnchor id={'section_bundles'} key={'section_bundles'}>
+                        <PageSection content={
+                            <FoodGrid 
+                                id='bundles'
+                                title='Bundles'
+                                data={generateCardsData(this.props.bundles, Card, this.purchaseBundleHandler, this.props.pizzas)}
+                                elementsInRow={4}
+                            />
+                        }/>
+                    </ScrollableAnchor>
+                    <ScrollableAnchor id={'section_altfoods'} key={'section_altfoods'}>
+                        <PageSection content={
+                            <FoodGrid 
+                                id='altfood'
+                                title='AltFood'
+                                data={generateCardsData(this.props.altFoods, Card, this.purchaseContinueHandler)}
+                                elementsInRow={4}
+                            />
+                        }/>
+                    </ScrollableAnchor>
+                    
+                    <ScrollableAnchor id={'section_drinks'} key={'section_drinks'}>
+                        <PageSection content={
+                            <FoodGrid
+                                id='drinks'
+                                title='Drinks'
+                                data={generateCardsData(this.props.drinks, Card, this.purchaseContinueHandler)}
+                                elementsInRow={4}
+                            />
+                        } />
+                    </ScrollableAnchor>
                 </AUX>
             )
         }
