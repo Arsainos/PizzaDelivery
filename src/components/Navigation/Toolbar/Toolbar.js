@@ -4,32 +4,53 @@ import React,{Component} from 'react';
 import classes from './Toolbar.module.css';
 
 // import components
-import Button from '../../UI/Button/Button.js';
 import NavigationItems from '../NavigationItems/NavigationItems.js';
 import Logo from '../../UI/Logo/Logo.js';
 import { NavLink } from 'react-router-dom';
 
-// import redux
-import {connect} from 'react-redux';
-
 class Toolbar extends Component {
     render(){
+
+        let authButton = null;
+        if(this.props.isAuthenticated) {
+            authButton = (
+                <button 
+                    className={classes.AuthButton}
+                    onClick={()=>this.props.onLogout()}
+                >                        
+                    {`Logout`}          
+                </button>
+            )
+        } else {
+            authButton = (
+                <button 
+                    onClick={()=>this.props.onLogin()}
+                    className={classes.AuthButton}
+                >                        
+                    {`Login`}          
+                </button>
+            )
+        }
+
         return (
             <header className={classes.Toolbar}>
                 <Logo />
                 <div className={classes.ToolbarWrap}>
                     <div className={classes.TopPanel}>
                         <p>Aute mollit sit ullamco esse nostrud elit mollit!</p>
+                        {authButton}
                         <NavLink 
                             to={`/checkout`}
                             exact
                             className={classes.CartButton}>                        
-                                {`Cart ${this.props.cart.size > 0 ? [...this.props.cart.values()].reduce((accumulative, item) => accumulative + item) : `` }`}          
+                                {`Cart ${this.props.cartSize}`}          
                         </NavLink>
                     </div>    
                     <div className={classes.NavPanel}>
                         <nav>
-                            <NavigationItems />
+                            <NavigationItems 
+                                isAuthenticated={this.props.isAuthenticated}
+                            />
                         </nav>
                     </div>
                 </div>
@@ -39,10 +60,4 @@ class Toolbar extends Component {
     
 };
 
-const mapStateToProps = state => {
-    return {
-        cart: state.cart.cart
-    };
-};
-
-export default connect(mapStateToProps, null)(Toolbar);
+export default Toolbar;

@@ -14,7 +14,12 @@ class Layout extends Component {
     render() {
         return (
             <AUX>
-                <Toolbar>
+                <Toolbar
+                    onLogin={this.props.onLogin}
+                    onLogout={this.props.onLogout}
+                    cartSize={this.props.cartSize}
+                    isAuthenticated={this.props.isAuthenticated}
+                >
 
                 </Toolbar>
                 <main className={classes.Content}>

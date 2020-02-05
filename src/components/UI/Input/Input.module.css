@@ -1,0 +1,24 @@
+.Invalid {
+    border: 1px solid red;
+    background-color: salmon;
+}
+
+.Input {
+    min-width: 250px;
+    height: 40px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(135,134,134,.32);
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .Input:hover {
+    border-color: rgb(135,134,134);
+    outline: none;
+  }
+  
+  .Input:focus {
+    border-color: #ff6900;
+    outline: none;
+  }

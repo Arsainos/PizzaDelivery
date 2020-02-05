@@ -20,13 +20,14 @@
     top: 12px;
     left: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px 0 0 20px;
     box-sizing: border-box;
 }
 
 .TopPanel p {
+    flex: auto;
     padding-top: 10px;
     font-size: 24px;
 }
@@ -59,4 +60,24 @@
     font-size: 20px;
     cursor: pointer;
     box-sizing: border-box;
+}
+
+.AuthButton {
+    margin-right: 20px;
+    display: block;
+    text-align: center;
+    width: 110px;
+    min-height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #ff6900;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-color: #ff6900;
+    border: 2px solid;
+    outline: none;
 }
