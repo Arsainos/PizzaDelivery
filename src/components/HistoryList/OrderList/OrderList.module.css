@@ -1,0 +1,35 @@
+.Order {
+    margin-bottom: 40px;
+}
+
+.OrderHeaderWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f2f5;
+}
+
+.OrderHeader {
+    margin: 0;
+  
+}
+
+.OrderCheckout {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.OrderCheckoutMoney {
+    color: #ff6900;
+}
+  
+  .OrderCheckoutCurrency {
+    color: #ff6900;
+}
+
+.OrderList {
+    list-style: none;
+    padding: 0;
+}
+  

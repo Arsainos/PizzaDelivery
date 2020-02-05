@@ -73,7 +73,7 @@ export const onPurchaseOrder = (orderData, token) => {
             dispatch(purchaseOrderSuccess(response.data.name,orderData));
         })
         .catch(error => {
-            dispatch(error.response.data.error);
+            dispatch(purchaseOrderFail(error.response.data.error));
         })
     }
 }
