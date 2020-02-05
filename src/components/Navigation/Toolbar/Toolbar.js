@@ -7,6 +7,7 @@ import classes from './Toolbar.module.css';
 import NavigationItems from '../NavigationItems/NavigationItems.js';
 import Logo from '../../UI/Logo/Logo.js';
 import { NavLink } from 'react-router-dom';
+import { goToTop, removeHash } from 'react-scrollable-anchor';
 
 class Toolbar extends Component {
     render(){
@@ -43,7 +44,7 @@ class Toolbar extends Component {
                             to={`/checkout`}
                             exact
                             className={classes.CartButton}>                        
-                                {`Cart ${this.props.cartSize}`}          
+                                <span onClick={()=>{goToTop(); removeHash();}}>{`Cart ${this.props.cartSize}`}</span>          
                         </NavLink>
                     </div>    
                     <div className={classes.NavPanel}>
