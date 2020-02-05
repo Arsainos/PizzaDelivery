@@ -27,6 +27,9 @@ import carousel1 from '../../assets/Carousel/carousel1.jpg';
 import carousel2 from '../../assets/Carousel/carousel2.jpg';
 import carousel3 from '../../assets/Carousel/carousel3.jpg';
 
+//import styles
+import ModalClasses from '../../components/UI/Modal/Modal.module.css';
+
 class MainPage extends Component {
     state = {
         purchasing: false,
@@ -118,7 +121,7 @@ class MainPage extends Component {
 
         return(
             <AUX>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} modalClass={ModalClasses.ModalCard}>
                     {this.state.purchasingItem}
                 </Modal>
                 <div>

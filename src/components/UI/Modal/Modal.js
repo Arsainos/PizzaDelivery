@@ -14,7 +14,7 @@ class Modal extends Component {
         <Auxilary>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
                 <div 
-                    className={classes.Modal}
+                    className={[classes.Modal, this.props.modalClass].join(' ')}
                     style={{
                         display: this.props.show ? 'block' : 'none'
                     }}

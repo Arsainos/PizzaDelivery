@@ -1,7 +1,7 @@
 .Modal {
     position: fixed;
     z-index: 500;
-    width: 900px;
+    /* width: 900px; */
     padding: 40px 30px 40px 40px;
     top: 50%;
     left: 50%;
@@ -9,4 +9,12 @@
     border-radius: 20px;
     background-color: #ffffff;
     box-sizing: border-box;
+}
+
+.ModalCard {
+    width: 900px;
+}
+
+.ModalAuth {
+    width: 400px;
 }

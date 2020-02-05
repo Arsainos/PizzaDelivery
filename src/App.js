@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // import styles
 import classes from './App.module.css';
+import modalClasses from './components/UI/Modal/Modal.module.css';
 
 // import components
 import Layout from './components/Layout/Layout.js';
@@ -85,7 +86,7 @@ class App extends Component  {
 
     return (
       <div className={classes.App}>
-        <Modal show={this.state.isLoginProcessing}>
+        <Modal show={this.state.isLoginProcessing} modalClass={modalClasses.ModalAuth}>
           <Auth 
             loading={this.props.isAuthLoading}
             onSubmitForm={this.onSubmitHandler}
