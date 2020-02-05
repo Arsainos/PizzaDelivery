@@ -36,7 +36,16 @@ const Cart = (props) => {
                     to={`/orders`}
                     exact
                 >
-                    <button className={classes.CartOrderButton} onClick={() => props.onOrder()}>Order</button>
+                    <button className={classes.CartOrderButton} 
+                        onClick={() => props.onPurchase(
+                            {order: props.list, 
+                            totalPrice:getTotalPrice(props.list), 
+                            orderData:{
+                                phone:`88005556565`,
+                                address:`best street in the wrold`,
+                                commentary:`as fast as it could`
+                            }})}
+                    >Order</button>
                 </NavLink>           
             </div>
         </div>

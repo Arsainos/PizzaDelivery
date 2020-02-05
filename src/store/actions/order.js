@@ -68,7 +68,7 @@ export const onPurchaseOrder = (orderData, token) => {
     return dispatch => {
         dispatch(purchaseOrderStart());
 
-        axios.post('/orders.json?auth'+token, orderData)
+        axios.post('/orders.json?auth='+token, orderData)
         .then(response => {
             dispatch(purchaseOrderSuccess(response.data.name,orderData));
         })
