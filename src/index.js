@@ -13,6 +13,7 @@ import foodReducer from './store/reducers/food.js';
 import promotionReducer from './store/reducers/promotions.js';
 import cartReducer from './store/reducers/cart.js';
 import authReducer from './store/reducers/userAuth.js';
+import orderReducer from './store/reducers/order.js';
 
 // for react-toolkit
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
@@ -21,7 +22,7 @@ const rootReducer = combineReducers(
     {
         ingredient:null,
         auth:authReducer,
-        order:null,
+        order:orderReducer,
         food:foodReducer,
         promotion:promotionReducer,
         cart:cartReducer
