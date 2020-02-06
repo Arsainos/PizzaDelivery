@@ -19,7 +19,6 @@ import * as authActions from '../../store/actions/auth.js';
 // import styles
 import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
 import ModalClasses from '../../components/UI/Modal/Modal.module.css';
-import { updateObject } from '../../utils/helpres.js';
 
 class Checkout extends Component {
     state = {
