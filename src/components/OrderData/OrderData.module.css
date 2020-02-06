@@ -1,0 +1,72 @@
+.ConfirmOrder {
+    position: absolute;
+    width: 500px;
+    padding: 40px 10px 40px 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    border: 2px solid red;
+}
+
+.AddressForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Input {
+    min-width: 250px;
+    height: 40px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(135,134,134,.32);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.Input :hover {
+    border-color: rgb(135,134,134);
+    outline: none;
+}
+
+.Input :focus {
+    border-color: #ff6900;
+    outline: none;    
+}
+
+.TextArea {
+    min-width: 350px;
+    height: 100px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(135,134,134,.32);
+    border-radius: 10px;
+    resize: none;
+    font: inherit;
+    text-align: left;    
+}
+
+.TextArea :hover {
+    border-color: rgb(135,134,134);
+    outline: none;    
+}
+
+.TextArea :focus {
+    border-color: #ff6900;
+    outline: none;    
+}
+
+.AddressFormButton {
+    width: auto;
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #ff6900;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;    
+}

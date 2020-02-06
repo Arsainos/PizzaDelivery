@@ -27,7 +27,8 @@ class Auth extends Component {
                     isEmail: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                classes: null
             },
             password: {
                 elementType: 'input',
@@ -41,7 +42,8 @@ class Auth extends Component {
                     minLength: 6
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                classes: null
             }
         },
         isSingup: true
@@ -88,6 +90,7 @@ class Auth extends Component {
                         invalid={!inputElement.config.valid}
                         shouldValidate={inputElement.config.validation}
                         touched={inputElement.config.touched}
+                        classes={inputElement.config.classes}
                         changed={(event) => this.inputChangedHandler(event, inputElement.id)}
                     />
                 )

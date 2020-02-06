@@ -32,21 +32,12 @@ const Cart = (props) => {
                     <span className={classes.CartCheckoutText}>Order price:</span>
                     <span className={classes.CartCheckoutMoney}>{getTotalPrice(props.list)}</span><span className={classes.CartCheckoutCurrency}>$</span>
                 </div>
-                <NavLink
-                    to={`/orders`}
-                    exact
-                >
-                    <button className={classes.CartOrderButton} 
+                <button className={classes.CartOrderButton} 
                         onClick={() => props.onPurchase(
                             {order: props.list, 
                             totalPrice:getTotalPrice(props.list), 
-                            orderData:{
-                                phone:`88005556565`,
-                                address:`best street in the wrold`,
-                                commentary:`as fast as it could`
-                            }})}
-                    >Order</button>
-                </NavLink>           
+                            })}
+                    >Order</button>       
             </div>
         </div>
     )
