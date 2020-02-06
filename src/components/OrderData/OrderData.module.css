@@ -26,12 +26,12 @@
     font-size: 16px;
 }
 
-.Input :hover {
+.Input:hover {
     border-color: rgb(135,134,134);
     outline: none;
 }
 
-.Input :focus {
+.Input:focus {
     border-color: #ff6900;
     outline: none;    
 }
@@ -48,12 +48,12 @@
     text-align: left;    
 }
 
-.TextArea :hover {
+.TextArea:hover {
     border-color: rgb(135,134,134);
     outline: none;    
 }
 
-.TextArea :focus {
+.TextArea:focus {
     border-color: #ff6900;
     outline: none;    
 }
