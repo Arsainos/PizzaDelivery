@@ -36,3 +36,7 @@
     background-color: #ff6900;
     cursor: pointer;
 }
+
+.CartOrderButton:focus {
+    outline: none;
+}

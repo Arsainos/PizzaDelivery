@@ -122,6 +122,10 @@ input[type="radio"].VisuallyHidden {
     cursor: pointer;
 }
 
+.AddButton:focus {
+    outline: none;
+}
+
 
 
 

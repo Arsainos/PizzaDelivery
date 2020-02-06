@@ -32,6 +32,10 @@
     font-size: 16px;
     cursor: pointer;
 }
+
+.SignUpFormButtonSignUp:focus {
+    outline: none;
+}
   
 .SignUpFormButtonSignIn {
     width: auto;
@@ -43,6 +47,10 @@
     background-color: #ffffff;
     font-size: 16px;
     cursor: pointer;
+}
+
+.SignUpFormButtonSignIn:focus {
+    outline: none;
 }
 
 .ErrorMessage {

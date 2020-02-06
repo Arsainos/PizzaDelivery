@@ -5,7 +5,6 @@ import classes from './Cart.module.css';
 
 // import components
 import CartList from '../CartList/CartList.js';
-import { NavLink } from 'react-router-dom';
 
 const Cart = (props) => {
     const getTotalPrice = (list) => {

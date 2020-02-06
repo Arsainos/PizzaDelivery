@@ -70,3 +70,7 @@
     cursor: pointer;
     align-self: center;    
 }
+
+.AddressFormButton:focus {
+    outline: none;
+}
