@@ -66,6 +66,10 @@ class App extends Component  {
     }
   }
 
+  modalAuthCancelHandler = () => {
+    this.setState({isLoginProcessing:false});
+  };
+
   render() {
     let routes = (
       <Switch>
@@ -90,7 +94,7 @@ class App extends Component  {
 
     return (
       <div className={classes.App}>
-        <Modal show={this.state.isLoginProcessing} modalClass={modalClasses.ModalAuth}>
+        <Modal show={this.state.isLoginProcessing} modalClass={modalClasses.ModalAuth} modalClosed={this.modalAuthCancelHandler}>
           <Auth 
             loading={this.props.isAuthLoading}
             onSubmitForm={this.onSubmitHandler}

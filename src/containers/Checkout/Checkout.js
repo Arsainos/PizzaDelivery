@@ -92,6 +92,14 @@ class Checkout extends Component {
             this.props.history.push('/orders');
         }
     }
+
+    modalAuthCancelHandler = () => {
+        this.setState({processing:true, isAuthRequired: false});
+    };
+
+    modalOrderCancelHandler = () => {
+        this.setState({processing:false, orders : null, totalPrice: 0, orderData: null, isAuthRequired: false});
+    };
     
     render() {
         let cartPage = this.props.error ? <p>Sorry, we can not load this page!</p> : <Spinner spinnerClass={spinnerClasses.LoaderMain} />
@@ -100,7 +108,7 @@ class Checkout extends Component {
 
         if(this.state.processing) {
             ModalContent = 
-            <Modal show={this.state.processing} modalClass={ModalClasses.ModalCard}>
+            <Modal show={this.state.processing} modalClass={ModalClasses.ModalCard} modalClosed={this.modalOrderCancelHandler}>
                 <OrderData
                     onSubmitForm={this.onSubmitHandlerOrder}
                 />
@@ -108,7 +116,7 @@ class Checkout extends Component {
         } else {
             if(this.state.isAuthRequired) {
                 ModalContent = 
-                <Modal show={this.state.isAuthRequired} modalClass={ModalClasses.ModalAuth}>
+                <Modal show={this.state.isAuthRequired} modalClass={ModalClasses.ModalAuth} modalClosed={this.modalAuthCancelHandler}>
                     <Auth 
                         loading={this.props.isAuthLoading}
                         onSubmitForm={this.onSubmitHandler}
