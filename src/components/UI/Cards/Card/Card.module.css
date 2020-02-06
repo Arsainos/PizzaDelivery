@@ -60,4 +60,8 @@ body {
     background-color: transparent;
     cursor: pointer;
   }
+
+  .ProductButton:focus {
+    outline: none;
+  }
   
