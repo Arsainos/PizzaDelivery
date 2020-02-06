@@ -14,13 +14,16 @@ import * as actions from '../../store/actions/order.js';
 // import styles
 import spinnerClasses from '../../components/UI/Spinner/Spinner.module.css';
 
+// import routing
+import { Redirect, withRouter } from 'react-router-dom';
+
 class OrdersHistory extends Component {
     componentDidMount() {
         this.props.onFetchOrders(this.props.token, this.props.userId);
     }
     
     render() {
-        let historyPage = <Spinner spinnerClass={spinnerClasses.LoaderMain} />;
+        let historyPage = this.props.isAuthenticated ? <Spinner spinnerClass={spinnerClasses.LoaderMain} /> : (<Redirect to="/" />);
 
         if(!this.props.loading) {
             historyPage = <History orders={this.props.orders}/>
@@ -39,7 +42,8 @@ const mapStateToProps = state => {
         isLoading: state.order.loading,
         orders: state.order.orders,
         token: state.auth.token,
-        userId: state.auth.userId
+        userId: state.auth.userId,
+        isAuthenticated: state.auth.token !== null
     }
 }
 
@@ -49,4 +53,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(OrdersHistory);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(OrdersHistory));
